@@ -70,7 +70,7 @@ function App() {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     console.log(formData);
 
     try {
@@ -97,26 +97,46 @@ function App() {
             </h2>
             <h2 className="text-2xl font-bold tracking-tight text-orange sm:text-2xl font-sans">
               <br />
-              SUNDAY, OCTOBER 22
+              SUNDAY, OCTOBER 22, 2023
             </h2>
-            <h2 className="text-xl font-bold tracking-tight text-black sm:text-xl font-sans">
+            {/* <h2 className="text-xl font-bold tracking-tight text-black sm:text-xl font-sans">
               12 PM - 5 PM
               <br />
               <br />
               DIVISADERO ST, BETWEEN DUBOCE AND 14TH
-            </h2>
+            </h2> */}
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-black">
-              A neighborhood celebration with music, tai chi, arts and crafts,
-              potluck and more!
+              Dear Neighbors,
+              <br />
+              <br />
+              Thanks again for coming to our 2023 Buena Vista Block Party. There
+              were many fun highlights, and it was successful because the
+              community came together despite the rain.
+              <br />
+              <br />
+              Please check out the{" "}
+              <a
+                href="https://photos.app.goo.gl/Tr1gNPwxFe7dtihv8"
+                target="_blank"
+              >
+                photos
+              </a>{" "}
+              (thank you, Girish!), make a donation if you like, and provide
+              feedback on how we can make next year even better.
+              <br />
+              <br />
+              In Community,
+              <br />
+              <br />
+              Rasheq and the party planning committee
             </p>
-            <br />
+            {/* <br />
             <ol className="mt-4 space-y-1 text-sm leading-6 text-gray-500">
               {meetings.map((meeting) => (
                 <li
                   key={meeting.id}
                   className="group flex items-center space-x-4 rounded-xl px-4 py-2 focus-within:bg-gray-100 hover:bg-gray-100"
                 >
-
                   <div className="flex-auto">
                     <p className="text-gray-900">{meeting.name}</p>
                     <p className="mt-0.5">
@@ -143,10 +163,17 @@ function App() {
             <br />
             <i>Joining us are:</i>
             <br />
-            Mayor London Breed, City Attorney David Chiu, SFPD Captain Jack Hart with a fire truck, and many
-            others.
+            Mayor London Breed, City Attorney David Chiu, SFPD Captain Jack Hart
+            with a fire truck, and many others. */}
           </div>
           <div className="mt-10 flex flex-col items-center justify-center gap-y-6">
+            <a
+              href="https://photos.app.goo.gl/Tr1gNPwxFe7dtihv8"
+              target="_blank"
+              className="rounded-md bg-deep-blue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-deep-blue-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Photos
+            </a>
             <a
               href="https://gofund.me/30dcf327"
               target="_blank"
@@ -156,11 +183,9 @@ function App() {
             </a>
             <div className="text-left bg-white bg-opacity-50 p-6 m-4 rounded-lg shadow-md w-3/4">
               <h2 className="text-xl font-bold tracking-tight text-black sm:text-xl font-sans">
-                Let us know you're coming!
+                Feedback
               </h2>
-              <p className="py-2">
-                Provide your details so we can keep you up to date.
-              </p>
+              <p className="py-2">How can we make next year even better?</p>
               <br />
               <form onSubmit={handleSubmit}>
                 <div className="w-full">
@@ -222,7 +247,7 @@ function App() {
                     />
                   </div>
                 </div>
-                <br />
+                {/* <br />
                 <div className="w-full">
                   <label
                     htmlFor="number"
@@ -241,22 +266,20 @@ function App() {
                       placeholder="3"
                     />
                   </div>
-                </div>
+                </div> */}
                 <br />
                 <div className="w-full">
-                  <p className="text-lg font-medium leading-6 text-black">
-                    <b>Able to contribute?</b>
+                  <p className="block text-sm font-medium leading-6 text-gray-900">
+                    Suggestions
                   </p>
 
                   <div className="w-full">
-                    <label
+                    {/* <label
                       htmlFor="comment"
                       className="block mt-2 text-sm font-medium leading-6 text-gray-900"
                     >
-                      Can you bring something for the potluck, provide
-                      entertainment, sing, dance, play an instrument? Please let
-                      us know and we'll be in touch!
-                    </label>
+                      Let us know what 
+                    </label> */}
                     <div className="mt-2">
                       <textarea
                         rows={4}
@@ -283,14 +306,14 @@ function App() {
                     </>
                   ) : (
                     <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-black">
-                      <b>Thank you! See you on Sunday!</b>
+                      <b>Thank you!</b>
                     </p>
                   )}
                 </div>
               </form>
             </div>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-black">
-              Volunteer, contribute, or just say hello:
+              Get in touch!
               <br />
               <a
                 href="mailto:hi@buenavistaparty.com"
